@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../shared/book';
 
+// Smart Component == Container Component
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
