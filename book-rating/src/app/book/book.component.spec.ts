@@ -19,6 +19,13 @@ describe('BookComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BookComponent);
     component = fixture.componentInstance;
+    // @Input
+    component.book = {
+      isbn: 'XXX',
+      title: 'xxx',
+      description: '',
+      rating: 5
+    };
     fixture.detectChanges();
   });
 

@@ -3,7 +3,8 @@
     <img src="//gravatar.com/avatar/{{book.rating}}?s=80&default=wavatar" />
   </div>
 
-  <h2>{{ book.title }} <small>Stars <span *ngFor="let x of getStars()">*</span></small></h2>
+  <h2>{{ book.title }} <small>Stars
+    <span *ngFor="let x of getStars()" class="glyphicon glyphicon-star"></span></small></h2>
   <p>{{ book.description }}</p>
 </div>
 
