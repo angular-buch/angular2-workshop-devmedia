@@ -11,5 +11,9 @@ export class BookComponent {
 
   @Input() book: Book;
 
+  getStars() {
+    return new Array(this.book.rating);
+  }
+
   constructor() { }
 }

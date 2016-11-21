@@ -15,8 +15,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.books = [
-      new Book('12312-123', 'Angular 2', 'yay!'),
-      new Book('123123123', 'Angular JS 1', 'schön war\'s')
+      new Book('12312-123', 'Angular 2', 'yay!', 5),
+      new Book('123123123', 'Angular JS 1', 'schön war\'s', 2)
     ];
   }
 }
