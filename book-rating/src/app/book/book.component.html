@@ -6,5 +6,15 @@
   <h2>{{ book.title }} <small>Stars
     <span *ngFor="let x of getStars()" class="glyphicon glyphicon-star"></span></small></h2>
   <p>{{ book.description }}</p>
+
+  <button
+    (click)="rateUp()"
+    class="btn btn-danger glyphicon glyphicon-thumbs-up">
+  </button>
+
+  <button
+    (click)="rateDown()"
+    class="btn btn-danger glyphicon glyphicon-thumbs-down">
+  </button>
 </div>
 
