@@ -20,6 +20,12 @@ export class DashboardComponent implements OnInit {
     ];
   }
 
+  add(isbn, title, description) {
+    let book = new Book(isbn.value, title.value, description.value);
+    this.books.push(book);
+    isbn.value = title.value = description.value = '';
+  }
+
   reorderBooks() {
     this.books.sort((a, b) => b.rating - a.rating);
   }
