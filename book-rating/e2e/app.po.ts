@@ -5,7 +5,7 @@ export class BookRatingPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getH1Text() {
+    return element(by.css('br-root h1')).getText();
   }
 }

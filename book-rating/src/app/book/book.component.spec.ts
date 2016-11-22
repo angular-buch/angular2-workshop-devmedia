@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { BookComponent } from './book.component';
+import { Book } from '../shared/book';
 
 describe('BookComponent', () => {
   let component: BookComponent;
@@ -20,12 +21,7 @@ describe('BookComponent', () => {
     fixture = TestBed.createComponent(BookComponent);
     component = fixture.componentInstance;
     // @Input
-    component.book = {
-      isbn: 'XXX',
-      title: 'xxx',
-      description: '',
-      rating: 5
-    };
+    component.book = new Book('x', 'x', 'x');
     fixture.detectChanges();
   });
 
