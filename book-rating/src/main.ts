@@ -9,4 +9,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic([
+  {
+    provide: 'SERVER_URL',
+    useValue: environment.serverUrl
+  }
+]).bootstrapModule(AppModule);

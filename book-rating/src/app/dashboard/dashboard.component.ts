@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Book } from '../shared/book';
 
 // Smart Component == Container Component
@@ -11,7 +11,9 @@ export class DashboardComponent implements OnInit {
 
   books: Book[];
 
-  constructor() { }
+  constructor(@Inject('SERVER_URL') url: string) {
+    console.log(url);
+  }
 
   ngOnInit() {
     this.books = [
