@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '../shared/book';
 
 // Smart Component == Container Component
@@ -11,7 +10,6 @@ import { Book } from '../shared/book';
 export class DashboardComponent implements OnInit {
 
   books: Book[];
-  @ViewChild(NgForm) form;
 
   constructor() { }
 
@@ -22,10 +20,8 @@ export class DashboardComponent implements OnInit {
     ];
   }
 
-  add(isbn: string, title: string, description: string) {
-    let book = new Book(isbn, title, description);
+  add(book: Book) {
     this.books.push(book);
-    this.form.reset();
   }
 
   reorderBooks() {
