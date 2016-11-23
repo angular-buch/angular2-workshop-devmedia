@@ -1,4 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { BookStoreService } from './../shared/book-store.service';
 import { Book } from '../shared/book';
 
 // Smart Component == Container Component
@@ -11,15 +13,10 @@ export class DashboardComponent implements OnInit {
 
   books: Book[];
 
-  constructor(@Inject('SERVER_URL') url: string) {
-    console.log(url);
-  }
+  constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-    this.books = [
-      new Book('12312-123', 'Angular 2', 'yay!', 5),
-      new Book('123123123', 'Angular JS 1', 'schön war\'s')
-    ];
+     this.bs.getAll().subscribe(books => this.books = books);
   }
 
   add(book: Book) {

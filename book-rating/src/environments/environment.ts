@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'XXX'
+  serverUrl: 'https://book-monkey2-api.angular-buch.com/'
 };
